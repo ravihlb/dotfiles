@@ -19,6 +19,7 @@ alias v.='nvim .'
 
 # git
 alias g='git'
+alias gc='git commit'
 alias gis='git status'
 alias gic='git cherry -v' 
 alias gip='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
@@ -33,5 +34,5 @@ alias bt='bluetoothctl'
 
 # X settings
 xset r rate 190 80
-vibrant-cli HDMI-1 1.42 > 2&1> /dev/null
-vibrant-cli eDP-1 1.42 > 2&1> /dev/null
+vibrant-cli HDMI-1 1.42 > /dev/null 2>&1 &
+vibrant-cli eDP-1 1.42 > /dev/null 2>&1 &
