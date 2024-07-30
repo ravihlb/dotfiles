@@ -9,6 +9,3 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 source ~/.profile
 export EDITOR='nvim'
-export VISUAL='codium'
-export PATH="$(yarn global bin):$PATH"
-
