@@ -1,5 +1,6 @@
 # This
 alias vp='nvim ~/.profile'
+alias vb='nvim ~/.bashrc'
 alias sp='source ~/.profile'
 
 # General
@@ -8,6 +9,8 @@ alias rmrf='rm -rf'
 alias nodejs='node'
 alias px='ps | grep'
 alias se='sudoedit'
+alias ..='cd ..'
+alias ...='cd .. && cd ..'
 
 # git
 alias g='git'
@@ -26,7 +29,7 @@ alias vc='cd ~/.config/nvim && nvim .'
 alias vt='nvim ~/.tmux.conf'
 
 ## Projects
-alias cdp='cd ~/projects/personal/'
+alias cdp='cd ~/projects/'
 alias vd='cd ~/projects/personal/dotfiles/ && nvim .'
 alias vn='cd ~/projects/personal/notebook.md && nvim .'
 
@@ -40,11 +43,18 @@ alias bt='bluetoothctl'
 alias btc="bluetoothctl -- connect $headsetMacAddress"
 alias btd='bluetoothctl -- disconnect'
 
-# X settings
-xrandr --output HDMI-1 --auto --left-of eDP-1
-xset r rate 190 80
-vibrant-cli HDMI-1 1.42 > /dev/null 2>&1
-vibrant-cli eDP-1 1.42 > /dev/null 2>&1
-setxkbmap br
+defaultMonitor="HDMI-A-0"
 
-picom -b
+# X settings
+# xrandr --output HDMI-A-0 --auto --left-of eDP-1
+
+xset r rate 190 80
+
+vibrant-cli "$defaultMonitor" 1.8 > /dev/null 2>&1
+# vibrant-cli eDP-1 1.42 > /dev/null 2>&1
+
+setxkbmap br
+localectl set-x11-keymap br, qwerty grp:win_space_toggle
+
+export EDITOR='nvim'
+export VISUAL='nvim'

@@ -1,4 +1,5 @@
 currDir=$(dirname $0)
 
-touch ~/.profile
-sudo ln -s ~/.profile "$dirname/.profile"
+sudo ln "$dirname/.profile" ~/.profile
+sudo ln "$dirname/.bashrc" ~/.bashrc
+sudo ln "$dirname/.tmux.conf" ~/.tmux.conf
