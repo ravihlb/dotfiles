@@ -16,3 +16,5 @@ ntp \
 pavucontrol \
 spotify \
 vibrant-cli \
+xclip \
+
