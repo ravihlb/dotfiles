@@ -1,6 +1,7 @@
-# This
+# Config
 alias vp='nvim ~/.profile'
 alias vb='nvim ~/.bashrc'
+alias vz='nvim ~/.zshrc'
 alias sp='source ~/.profile'
 
 # General
@@ -9,7 +10,10 @@ alias rmrf='rm -rf'
 alias nodejs='node'
 alias px='ps | grep'
 alias se='sudoedit'
-alias l='ls -lh'
+
+alias ls='ls --color=auto'
+alias l='ls -lah'
+alias grep='grep --color=auto'
 alias ..='cd ..'
 alias ...='cd .. && cd ..'
 alias sus='systemctl suspend'
@@ -22,6 +26,7 @@ alias gis='git status'
 alias gic='git cherry -v' 
 alias gip='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 alias gd='git diff'
+alias gp='git push'
 
 # Neovim
 alias v='nvim'
@@ -61,4 +66,13 @@ vibrant-cli "$defaultMonitor" 1.5 > /dev/null 2>&1
 # setxkbmap br
 setxkbmap us
 localectl set-x11-keymap us, qwerty grp:win_space_toggle
-neofetch
+
+# .zshrc prompt
+PS1=" %F{green}> %F{white}%3~ %# "
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [[ -z "$TMUX" ]]; then
+    tmux attach || exec tmux
+    neofetch
+fi
+
+zsh
