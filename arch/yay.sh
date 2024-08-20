@@ -1,4 +1,4 @@
-yay -Sy \
+yay -S --sudoloop --noconfirm \
 nvim-nightly \
 vlc \
 gnome-terminal \
@@ -17,4 +17,3 @@ pavucontrol \
 spotify \
 vibrant-cli \
 xclip \
-

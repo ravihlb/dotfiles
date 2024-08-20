@@ -1,5 +1,5 @@
 # Here be my config
 
-These are my config files. They'll work for arch and maybe partly for Debian, but who knows.
+These are my config files. 
 
 Made for arch btw.
