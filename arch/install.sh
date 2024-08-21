@@ -1,4 +1,4 @@
-locale="us"
+locale="en_US"
 
 localectl set-x11-keymap "$locale", qwerty grp:win_space_toggle
 

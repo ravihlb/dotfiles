@@ -1,8 +1,16 @@
 # Config
+#
+## Editing
 alias vp='nvim ~/.profile'
 alias vb='nvim ~/.bashrc'
 alias vz='nvim ~/.zshrc'
+alias vi3='nvim ~/.config/i3/config'
+
+## Sourcing
 alias sp='source ~/.profile'
+alias sz='source ~/.zshrc'
+
+alias wmr='i3-msg restart'
 
 # General
 alias cls='clear'
