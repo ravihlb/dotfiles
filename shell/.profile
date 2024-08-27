@@ -1,12 +1,16 @@
 # Config
 #
 ## Editing
+alias v='nvim -c Oil'
+alias v.='nvim . -c Oil'
+
 alias vp='nvim ~/.profile'
 alias vb='nvim ~/.bashrc'
 alias vz='nvim ~/.zshrc'
 alias vi3='nvim ~/.config/i3/config'
 
 ## Sourcing
+alias sb='source ~/.bashrc'
 alias sp='source ~/.profile'
 alias sz='source ~/.zshrc'
 
@@ -36,10 +40,6 @@ alias gip='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 alias gd='git diff'
 alias gp='git push'
 
-# Neovim
-alias v='nvim'
-alias v.='nvim .'
-
 ## Other config
 alias vc='cd ~/.config/nvim && nvim .'
 alias vt='nvim ~/.tmux.conf'
@@ -47,8 +47,8 @@ alias vt='nvim ~/.tmux.conf'
 ## CDs
 alias cdp='cd ~/projects/'
 alias cdd='cd ~/devices/'
-alias vd='cd ~/projects/personal/dotfiles/ && nvim .'
-alias vn='cd ~/projects/personal/notebook.md && nvim .'
+alias vd='cd ~/projects/dotfiles/ && nvim .'
+alias vn='cd ~/projects/notebook.md && nvim .'
 
 # adb/scrcpy
 alias adbip='adb shell ifconfig wlan0'
@@ -68,15 +68,12 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 # Autoexec
-xset r rate 190 80
+# xset r rate 190 80
 vibrant-cli "$defaultMonitor" 1.5 > /dev/null 2>&1
 
 # setxkbmap br
-setxkbmap us
-localectl set-x11-keymap us, qwerty grp:win_space_toggle
-
-# .zshrc prompt
-PS1=" %F{green}> %F{white}%3~ %# "
+# setxkbmap us
+# localectl set-x11-keymap us, qwerty grp:win_space_toggle
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [[ -z "$TMUX" ]]; then
     tmux attach || exec tmux

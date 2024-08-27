@@ -25,18 +25,26 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Prompt template loaded before p10k
+PS1=" %F{green}> %F{white}%3~ %# "
+
 ## Sourcing
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
 # Plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+## Plugin settings
+
+# Autocomplete keybinding
+bindkey '^ ' autosuggest-accept
 
 # Disable the cursor style feature
 ZVM_CURSOR_STYLE_ENABLED=false
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
