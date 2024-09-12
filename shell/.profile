@@ -22,6 +22,7 @@ alias rmrf='rm -rf'
 alias nodejs='node'
 alias px='ps | grep'
 alias se='sudoedit'
+alias t='tmux neww'
 
 alias ls='ls --color=auto'
 alias l='ls -lah'
@@ -39,6 +40,7 @@ alias gic='git cherry -v'
 alias gip='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 alias gd='git diff'
 alias gp='git push'
+alias gl='git pull'
 
 ## Other config
 alias vc='cd ~/.config/nvim && nvim .'
@@ -76,6 +78,7 @@ vibrant-cli "$defaultMonitor" 1.5 > /dev/null 2>&1
 # localectl set-x11-keymap us, qwerty grp:win_space_toggle
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [[ -z "$TMUX" ]]; then
-    tmux attach || exec tmux
-    neofetch
+    tmux attach || exec tmux new-session -A -s local
 fi
+
+neofetch

@@ -17,3 +17,5 @@ pavucontrol \
 spotify \
 vibrant-cli \
 xclip \
+mlocate \
+feh \

@@ -1,3 +1,6 @@
+## Sourcing
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -30,9 +33,6 @@ compinit
 # Prompt template loaded before p10k
 PS1=" %F{green}> %F{white}%3~ %# "
 
-## Sourcing
-[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
-
 # Plugins
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
@@ -44,6 +44,8 @@ source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Autocomplete keybinding
 bindkey '^ ' autosuggest-accept
+
+bindkey "^ " autosuggest-accept
 
 # Disable the cursor style feature
 ZVM_CURSOR_STYLE_ENABLED=false
