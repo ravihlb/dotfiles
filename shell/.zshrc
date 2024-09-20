@@ -18,6 +18,8 @@ setopt autocd nomatch
 unsetopt extendedglob
 bindkey -e
 # End of lines configured by zsh-newuser-install
+setopt share_history
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/ravi/.zshrc'
 
@@ -48,3 +50,4 @@ ZVM_CURSOR_STYLE_ENABLED=false
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source /usr/share/nvm/init-nvm.sh
