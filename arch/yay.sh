@@ -21,4 +21,5 @@ mlocate \
 feh \
 playerctl \
 clipmenu \ 
-xdotool
+xdotool \
+nitrogen
