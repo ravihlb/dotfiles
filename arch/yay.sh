@@ -19,3 +19,6 @@ vibrant-cli \
 xclip \
 mlocate \
 feh \
+playerctl \
+clipmenu \ 
+xdotool

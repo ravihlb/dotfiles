@@ -80,5 +80,3 @@ vibrant-cli "$defaultMonitor" 1.5 > /dev/null 2>&1
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [[ -z "$TMUX" ]]; then
     tmux attach || exec tmux new-session -A -s local
 fi
-
-neofetch
