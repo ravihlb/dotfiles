@@ -53,3 +53,6 @@ ZVM_CURSOR_STYLE_ENABLED=false
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /usr/share/nvm/init-nvm.sh
+
+# Created by `pipx` on 2024-09-22 12:50:44
+export PATH="$PATH:/home/ravi/.local/bin"
