@@ -22,7 +22,6 @@ alias rmrf='rm -rf'
 alias nodejs='node'
 alias px='ps | grep'
 alias se='sudoedit'
-alias t='tmux neww'
 
 alias ls='ls --color=auto'
 alias l='ls -lah'
@@ -81,5 +80,5 @@ vibrant-cli "$defaultMonitor" 1.5 > /dev/null 2>&1
 # localectl set-x11-keymap us, qwerty grp:win_space_toggle
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [[ -z "$TMUX" ]]; then
-    tmux attach || exec tmux new-session -A -s local
+    tmux attach || exec tmux
 fi
