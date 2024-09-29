@@ -1,8 +1,8 @@
 # Config
 #
 ## Editing
-alias v='nvim -c Oil'
-alias v.='nvim . -c Oil'
+alias v='nvim'
+alias v.='nvim .'
 
 alias vp='nvim ~/.profile'
 alias vb='nvim ~/.bashrc'
@@ -64,6 +64,9 @@ alias btr="bluetoothctl -- remove $headsetMacAddress"
 alias btd='bluetoothctl -- disconnect'
 
 defaultMonitor="HDMI-A-0"
+
+# CS50
+alias make50='make CC=clang CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror" LDLIBS="-lcs50 -lm"'
 
 # Env
 export EDITOR='nvim'
