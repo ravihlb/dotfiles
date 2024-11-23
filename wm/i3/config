@@ -197,3 +197,5 @@ bar {
 
 hide_edge_borders both
 for_window [class="^.*"] border pixel 0
+
+gaps inner 5

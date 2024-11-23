@@ -42,11 +42,6 @@ source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 ## Plugin settings
 
-# Autocomplete keybinding
-bindkey '^ ' autosuggest-accept
-
-bindkey "^ " autosuggest-accept
-
 # Disable the cursor style feature
 ZVM_CURSOR_STYLE_ENABLED=false
 
@@ -56,3 +51,14 @@ source /usr/share/nvm/init-nvm.sh
 
 # Created by `pipx` on 2024-09-22 12:50:44
 export PATH="$PATH:/home/ravi/.local/bin"
+
+# pnpm
+export PNPM_HOME="/home/ravi/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Autocomplete keybinding
+bindkey "^ " autosuggest-accept

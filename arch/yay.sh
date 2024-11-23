@@ -22,4 +22,7 @@ feh \
 playerctl \
 clipmenu \ 
 xdotool \
-nitrogen
+nitrogen \
+man \
+man-db \
+nvm \

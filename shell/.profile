@@ -70,9 +70,10 @@ alias make50='make CC=clang CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror" LDLIBS="-
 # Env
 export EDITOR='nvim'
 export VISUAL='nvim'
+export LESSPAGER='nvim -R'
 
 # Autoexec
-# xset r rate 190 80
+xset r rate 190 70
 vibrant-cli "$defaultMonitor" 1.5 > /dev/null 2>&1
 
 # setxkbmap br
