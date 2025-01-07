@@ -20,7 +20,7 @@ alias wmr='i3-msg restart'
 alias cls='clear'
 alias rmrf='rm -rf'
 alias nodejs='node'
-alias px='ps | grep'
+alias px='ps -e | grep'
 alias se='sudoedit'
 
 alias ls='ls --color=auto'
@@ -62,7 +62,7 @@ alias btc="bluetoothctl -- connect $headsetMacAddress"
 alias btr="bluetoothctl -- remove $headsetMacAddress"
 alias btd='bluetoothctl -- disconnect'
 
-defaultMonitor="HDMI-A-0"
+defaultMonitor="eDP-1"
 
 # CS50
 alias make50='make CC=clang CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror" LDLIBS="-lcs50 -lm"'
@@ -70,9 +70,11 @@ alias make50='make CC=clang CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror" LDLIBS="-
 # Env
 export EDITOR='nvim'
 export VISUAL='nvim'
-export LESSPAGER='nvim -R'
+export PAGER='nvim -R +Man!'
 
 # Autoexec
+# sh ~/projects/dotfiles/autostart/launcher.sh
+
 xset r rate 190 70
 vibrant-cli "$defaultMonitor" 1.5 > /dev/null 2>&1
 
