@@ -1,34 +1,40 @@
-# Config
-#
-## Editing
+# General coreutils
+alias ..='cd ..'
+alias ...='cd .. && cd ..'
+alias cls='clear'
+alias grep='grep --color=auto'
+alias l='ls -lah'
+alias ls='ls --color=auto'
+alias px='ps | grep'
+alias se='sudoedit'
+
+# Editing
 alias v='nvim'
 alias v.='nvim .'
 
-alias vp='nvim ~/.profile'
-alias vb='nvim ~/.bashrc'
-alias vz='nvim ~/.zshrc'
-alias vi3='nvim ~/.config/i3/config'
+# Notebook (Obsidian)
+alias vn='cd ~/projects/notebook.md && nvim .'
 
-## Sourcing
+# Editing config files
+alias vb='nvim ~/.bashrc'
+alias vp='nvim ~/.profile'
+alias vt='nvim ~/.tmux.conf'
+alias vw='nvim ~/.wezterm.lua'
+alias vz='nvim ~/.zshrc'
+
+# Vim config
+alias vc='cd ~/.config/nvim && nvim .'
+
+# Sourcing config
 alias sb='source ~/.bashrc'
 alias sp='source ~/.profile'
 alias sz='source ~/.zshrc'
 
-alias wmr='i3-msg restart'
+# wsl
+alias pw='powershell.exe'
 
-# General
-alias cls='clear'
-alias rmrf='rm -rf'
-alias nodejs='node'
-alias px='ps -e | grep'
-alias se='sudoedit'
-
-alias ls='ls --color=auto'
-alias l='ls -lah'
-alias grep='grep --color=auto'
-alias ..='cd ..'
-alias ...='cd .. && cd ..'
-alias sus='systemctl suspend'
+# TODO: implement for wsl
+# alias sus='systemctl suspend'
 
 # git
 alias g='git'
@@ -41,19 +47,15 @@ alias gd='git diff'
 alias gp='git push'
 alias gl='git pull'
 
-## Other config
-alias vc='cd ~/.config/nvim && nvim .'
-alias vt='nvim ~/.tmux.conf'
-
-## CDs
+# cd'ing
 alias cdp='cd ~/projects/'
-alias cdd='cd ~/devices/'
-alias vd='cd ~/projects/dotfiles/ && nvim .'
-alias vn='cd ~/projects/notebook.md && nvim .'
 
 # adb/scrcpy
 alias adbip='adb shell ifconfig wlan0'
 alias csrc='scrcpy -b5m -m1000'
+
+## for wsl
+alias b5m='powershell.exe scrcpy -b5m -m1000'
 
 # Devices
 headsetMacAddress='60:F4:3A:A2:57:D7'
@@ -78,10 +80,12 @@ export PAGER='nvim -R +Man!'
 xset r rate 190 70
 vibrant-cli "$defaultMonitor" 1.5 > /dev/null 2>&1
 
+# Keyboard config for X11
 # setxkbmap br
 # setxkbmap us
 # localectl set-x11-keymap us, qwerty grp:win_space_toggle
 
+# Starting tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [[ -z "$TMUX" ]]; then
-    tmux attach || exec tmux
+    tmux attach || exec tmux new-session -s 'local'
 fi
