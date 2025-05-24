@@ -1,9 +1,5 @@
-# Here be my config
+# `dotfiles`
 
-These are my config files. 
-
-Made for arch btw.
-
-## How to use this again?
-
-1. Make sure you're using Arch
+These are my (Arch) Linux dotfiles.
+Mainly intented to be used in Arch with i3-wm, X11 and wezterm.
+I do intend to migrate it from X11 to Wayland in the future.

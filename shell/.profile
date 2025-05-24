@@ -5,6 +5,7 @@ alias v='nvim'
 alias v.='nvim .'
 
 alias vp='nvim ~/.profile'
+alias vw='nvim ~/.wezterm.lua'
 alias vb='nvim ~/.bashrc'
 alias vz='nvim ~/.zshrc'
 alias vi3='nvim ~/.config/i3/config'
@@ -71,6 +72,9 @@ alias make50='make CC=clang CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror" LDLIBS="-
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='nvim -R +Man!'
+export LESSPAGER='nvim -R +Man!'
+export PATH=$PATH:/home/ravi/.local/share/bob/nvim-bin
+
 
 # Autoexec
 # sh ~/projects/dotfiles/autostart/launcher.sh

@@ -8,18 +8,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Keybindings
-
-bindkey "^[[1;5D" backward-word
-bindkey "^[[1;5C" forward-word
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=100000
 setopt autocd nomatch
 unsetopt extendedglob
-bindkey -e
+bindkey -v
 # End of lines configured by zsh-newuser-install
 setopt share_history
 
@@ -42,6 +37,7 @@ source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 ## Plugin settings
 
+bindkey '^ ' autosuggest-accept
 # Disable the cursor style feature
 ZVM_CURSOR_STYLE_ENABLED=false
 
@@ -59,6 +55,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# Autocomplete keybinding
-bindkey "^ " autosuggest-accept

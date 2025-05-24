@@ -1,7 +1,7 @@
 #!/bin/bash
 
 launch() {
-    nohup gnome-terminal &
+    nohup wezterm &
     nohup brave &
     nohup spotify &
     nohup autokey-gtk &
