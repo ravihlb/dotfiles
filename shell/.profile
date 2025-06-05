@@ -41,6 +41,8 @@ alias gip='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 alias gd='git diff'
 alias gp='git push'
 alias gl='git pull'
+alias gf='git fetch'
+alias gst='git stash'
 
 ## Other config
 alias vc='cd ~/.config/nvim && nvim .'
@@ -49,12 +51,17 @@ alias vt='nvim ~/.tmux.conf'
 ## CDs
 alias cdp='cd ~/projects/'
 alias cdd='cd ~/devices/'
+alias cdo='cd ~/syncthing/obsidian/'
+
 alias vd='cd ~/projects/dotfiles/ && nvim .'
 alias vn='cd ~/projects/notebook.md && nvim .'
 
 # adb/scrcpy
 alias adbip='adb shell ifconfig wlan0'
 alias csrc='scrcpy -b5m -m1000'
+
+# Launch Wezterm using NVIDIA PRIME offload
+alias wezterm='prime-run wezterm'
 
 # Devices
 headsetMacAddress='60:F4:3A:A2:57:D7'
@@ -69,15 +76,13 @@ defaultMonitor="eDP-1"
 alias make50='make CC=clang CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror" LDLIBS="-lcs50 -lm"'
 
 # Env
-export EDITOR='nvim'
-export VISUAL='nvim'
-export PAGER='nvim -R +Man!'
-export LESSPAGER='nvim -R +Man!'
-export PATH=$PATH:/home/ravi/.local/share/bob/nvim-bin
+local nvimBinPath='/home/ravi/.local/share/bob/nvim-bin/nvim'
 
-
-# Autoexec
-# sh ~/projects/dotfiles/autostart/launcher.sh
+export EDITOR=$nvimBinPath
+export VISUAL=$nvimBinPath
+export PAGER="$nvimBinPath -R +Man!"
+export LESSPAGER="$nvimBinPath -R +Man!"
+export PATH=$PATH:~/.local/share/bob/nvim-bin
 
 xset r rate 190 70
 vibrant-cli "$defaultMonitor" 1.5 > /dev/null 2>&1
@@ -88,4 +93,8 @@ vibrant-cli "$defaultMonitor" 1.5 > /dev/null 2>&1
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [[ -z "$TMUX" ]]; then
     tmux attach || exec tmux
+fi
+
+if [ -n "$TMUX" ]; then
+  ~/projects/dotfiles/autostart.sh
 fi

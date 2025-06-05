@@ -28,6 +28,9 @@ compinit
 # Prompt template loaded before p10k
 PS1=" %F{green}> %F{white}%3~ %# "
 
+# lscolors
+. /usr/share/LS_COLORS/dircolors.sh
+
 # Plugins
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
