@@ -1,5 +1,5 @@
 yay -S --sudoloop --noconfirm \
-neovim-git\
+nvim-nightly-bin\
 gnome-terminal \
 tmux \
 ttf-fantasque-nerd \

@@ -77,7 +77,7 @@ export PAGER='nvim -R +Man!'
 # Autoexec
 # sh ~/projects/dotfiles/autostart/launcher.sh
 
-xset r rate 190 70
+# xset r rate 190 70
 vibrant-cli "$defaultMonitor" 1.5 > /dev/null 2>&1
 
 # Keyboard config for X11

@@ -1,11 +1,11 @@
 yay -S --sudoloop --noconfirm \
-nvim-nightly \
+nvim-nightly-bin \
 vlc \
 gnome-terminal \
 tmux \
 ttf-fantasque-nerd \
 ttf-fantasque-sans-mono \
-barrier \
+deskflow \
 bluez \
 brave-bin \
 gimp \
