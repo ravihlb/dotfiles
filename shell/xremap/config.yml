@@ -1,7 +1,0 @@
-modmap:
-  - remap:
-      # FN: LEFTCTRL
-      leftshift: leftctrl
-      capslock: leftshift
-    device:
-      only: "/dev/input/event3"

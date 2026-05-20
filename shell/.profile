@@ -72,7 +72,7 @@ alias make50='make CC=clang CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror" LDLIBS="-
 # Env
 export EDITOR='nvim'
 export VISUAL='nvim'
-export PAGER='nvim -R +Man!'
+export PAGER='nvim -mR +Man!'
 
 # Autoexec
 # sh ~/projects/dotfiles/autostart/launcher.sh

@@ -19,7 +19,7 @@ HISTSIZE=100000
 SAVEHIST=100000
 setopt autocd nomatch
 unsetopt extendedglob
-bindkey -e
+bindkey -v
 # End of lines configured by zsh-newuser-install
 setopt share_history
 
