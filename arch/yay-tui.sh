@@ -1,13 +1,13 @@
 yay -S --sudoloop --noconfirm \
 nvim-nightly-bin\
-gnome-terminal \
+wezterm\
 tmux \
 ttf-fantasque-nerd \
 ttf-fantasque-sans-mono \
 bluez \
 ntfs-3g \
 ntp \
-xclip \
+# xclip \
 lua lua51 lua54 luarocks hererocks \
 python \
 zsh-autosuggestions \

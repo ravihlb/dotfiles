@@ -10,7 +10,7 @@ alias se='sudoedit'
 
 # Editing
 alias v='nvim'
-alias v.='nvim .'
+alias v.='nvim "$(pwd)"'
 
 # Notebook (Obsidian)
 alias vn='cd ~/projects/notebook.md && nvim .'
@@ -64,7 +64,10 @@ alias btc="bluetoothctl -- connect $headsetMacAddress"
 alias btr="bluetoothctl -- remove $headsetMacAddress"
 alias btd='bluetoothctl -- disconnect'
 
+## Display Controls
 defaultMonitor="eDP-1"
+alias sdb="ddcutil setvcp 10"
+
 
 # CS50
 alias make50='make CC=clang CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror" LDLIBS="-lcs50 -lm"'
@@ -72,12 +75,12 @@ alias make50='make CC=clang CFLAGS="-ggdb3 -O0 -std=c99 -Wall -Werror" LDLIBS="-
 # Env
 export EDITOR='nvim'
 export VISUAL='nvim'
-export PAGER='nvim -mR +Man!'
+export PAGER='nvimpager'
 
 # Autoexec
 # sh ~/projects/dotfiles/autostart/launcher.sh
 
-# xset r rate 190 70
+xset r rate 190 70
 vibrant-cli "$defaultMonitor" 1.5 > /dev/null 2>&1
 
 # Keyboard config for X11

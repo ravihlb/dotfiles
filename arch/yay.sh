@@ -1,28 +1,25 @@
 yay -S --sudoloop --noconfirm \
 nvim-nightly-bin \
 vlc \
-gnome-terminal \
+wezterm \
 tmux \
 ttf-fantasque-nerd \
 ttf-fantasque-sans-mono \
 deskflow \
 bluez \
-brave-bin \
 gimp \
-gnome-shell \
+# gnome-shell \
 keepassxc \
 ntfs-3g \
 ntp \
-pavucontrol \
-spotify \
+pwvucontrol \
 vibrant-cli \
-xclip \
 mlocate \
-feh \
-playerctl \
+# feh \
+# nitrogen \
+# playerctl \
 clipmenu \ 
-xdotool \
-nitrogen \
-man \
+# man \
 man-db \
 nvm \
+zsh 

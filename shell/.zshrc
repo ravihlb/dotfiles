@@ -52,13 +52,15 @@ source /usr/share/nvm/init-nvm.sh
 # Created by `pipx` on 2024-09-22 12:50:44
 export PATH="$PATH:/home/ravi/.local/bin"
 
+# Autocomplete keybinding
+bindkey "^ " autosuggest-accept
+
+eval "$(zoxide init zsh)"
+
 # pnpm
 export PNPM_HOME="/home/ravi/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
-
-# Autocomplete keybinding
-bindkey "^ " autosuggest-accept
